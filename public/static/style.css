@@ -1,0 +1,221 @@
+/* ═══════════════════════════════════════════════
+   تأكد — T2AKED Design System
+   Direction: "المسار" — the path from message to delivery
+   ═══════════════════════════════════════════════ */
+
+:root {
+  /* Brand */
+  --teal-900: #06312B;
+  --teal-800: #083D36;
+  --teal-700: #0A5148;
+  --teal-600: #0D7A6C;
+  --teal-500: #129182;
+  --teal-100: #DCF0EC;
+  --teal-50:  #EEF7F5;
+
+  --amber-600: #C77E00;
+  --amber-500: #E8A317;
+  --amber-100: #FCF0D8;
+
+  --cream: #FAF8F4;
+  --paper: #FFFFFF;
+  --ink: #1A2E2B;
+  --ink-soft: #4A5F5B;
+  --ink-mute: #7A8E8A;
+  --line: #E5E1D8;
+
+  /* Status colors — the product's language */
+  --st-new: #2563EB;        --st-new-bg: #EBF1FE;
+  --st-to_confirm: #C77E00; --st-to_confirm-bg: #FCF0D8;
+  --st-confirmed: #0D7A6C;  --st-confirmed-bg: #DCF0EC;
+  --st-preparing: #7C3AED;  --st-preparing-bg: #F1EAFD;
+  --st-shipped: #0369A1;    --st-shipped-bg: #E0F2FE;
+  --st-delivered: #16803C;  --st-delivered-bg: #DCFCE7;
+  --st-no_answer: #B45309;  --st-no_answer-bg: #FEF3C7;
+  --st-cancelled: #6B7280;  --st-cancelled-bg: #F3F4F6;
+  --st-returned: #B91C1C;   --st-returned-bg: #FEE2E2;
+
+  --danger: #DC2626;
+  --danger-bg: #FEE2E2;
+  --success: #16A34A;
+  --success-bg: #DCFCE7;
+
+  --radius: 14px;
+  --radius-sm: 9px;
+  --radius-pill: 999px;
+  --shadow-sm: 0 1px 3px rgba(8, 61, 54, 0.07);
+  --shadow: 0 4px 16px rgba(8, 61, 54, 0.09);
+  --shadow-lg: 0 12px 40px rgba(8, 61, 54, 0.14);
+  --font: 'IBM Plex Sans Arabic', 'Segoe UI', Tahoma, sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font);
+  background: var(--cream);
+  color: var(--ink);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+img, svg { max-width: 100%; }
+a { color: inherit; }
+button { font-family: inherit; cursor: pointer; }
+input, select, textarea { font-family: inherit; font-size: 1rem; }
+
+::selection { background: var(--teal-100); color: var(--teal-800); }
+
+/* ── Focus visibility (a11y) ── */
+:focus-visible { outline: 3px solid var(--teal-500); outline-offset: 2px; border-radius: 4px; }
+
+/* ═══════════ Buttons ═══════════ */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  padding: 12px 24px; border-radius: var(--radius-pill);
+  font-size: 1rem; font-weight: 600; border: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+  text-decoration: none; white-space: nowrap;
+  min-height: 46px;
+}
+.btn:active { transform: scale(0.97); }
+.btn:disabled { opacity: 0.55; cursor: not-allowed; }
+.btn-primary { background: var(--teal-600); color: #fff; box-shadow: 0 3px 12px rgba(13,122,108,0.3); }
+.btn-primary:hover { background: var(--teal-700); box-shadow: 0 5px 18px rgba(13,122,108,0.4); }
+.btn-dark { background: var(--teal-800); color: #fff; }
+.btn-dark:hover { background: var(--teal-900); }
+.btn-ghost { background: transparent; color: var(--teal-700); border: 1.5px solid var(--line); }
+.btn-ghost:hover { border-color: var(--teal-600); background: var(--teal-50); }
+.btn-amber { background: var(--amber-500); color: var(--teal-900); }
+.btn-amber:hover { background: var(--amber-600); color: #fff; }
+.btn-danger { background: var(--danger-bg); color: var(--danger); }
+.btn-danger:hover { background: var(--danger); color: #fff; }
+.btn-sm { padding: 7px 16px; font-size: 0.88rem; min-height: 36px; }
+.btn-block { width: 100%; }
+
+/* ═══════════ Status pills — the product language ═══════════ */
+.st {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 4px 12px; border-radius: var(--radius-pill);
+  font-size: 0.82rem; font-weight: 600; white-space: nowrap;
+}
+.st::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: currentColor; flex-shrink: 0; }
+.st-new { color: var(--st-new); background: var(--st-new-bg); }
+.st-to_confirm { color: var(--st-to_confirm); background: var(--st-to_confirm-bg); }
+.st-confirmed { color: var(--st-confirmed); background: var(--st-confirmed-bg); }
+.st-preparing { color: var(--st-preparing); background: var(--st-preparing-bg); }
+.st-shipped { color: var(--st-shipped); background: var(--st-shipped-bg); }
+.st-delivered { color: var(--st-delivered); background: var(--st-delivered-bg); }
+.st-no_answer { color: var(--st-no_answer); background: var(--st-no_answer-bg); }
+.st-cancelled { color: var(--st-cancelled); background: var(--st-cancelled-bg); }
+.st-returned { color: var(--st-returned); background: var(--st-returned-bg); }
+
+/* attention flags */
+.flag {
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 2px 9px; border-radius: var(--radius-pill);
+  font-size: 0.74rem; font-weight: 600;
+  background: var(--amber-100); color: var(--amber-600);
+}
+.flag-risk { background: var(--danger-bg); color: var(--danger); }
+
+/* ═══════════ Cards ═══════════ */
+.card {
+  background: var(--paper); border-radius: var(--radius);
+  border: 1px solid var(--line); box-shadow: var(--shadow-sm);
+}
+.card-pad { padding: 20px; }
+
+/* ═══════════ Forms ═══════════ */
+.field { margin-bottom: 16px; }
+.field label { display: block; font-weight: 600; font-size: 0.92rem; margin-bottom: 6px; color: var(--teal-800); }
+.input, .select, .textarea {
+  width: 100%; padding: 12px 14px;
+  border: 1.5px solid var(--line); border-radius: var(--radius-sm);
+  background: #fff; color: var(--ink); transition: border-color 0.15s;
+  min-height: 46px;
+}
+.input:focus, .select:focus, .textarea:focus { border-color: var(--teal-600); outline: none; box-shadow: 0 0 0 3px var(--teal-100); }
+.input.err { border-color: var(--danger); }
+.textarea { min-height: 100px; resize: vertical; }
+.hint { font-size: 0.82rem; color: var(--ink-mute); margin-top: 4px; }
+.err-msg { font-size: 0.84rem; color: var(--danger); margin-top: 4px; font-weight: 500; }
+
+/* ═══════════ Toast ═══════════ */
+#toast-wrap { position: fixed; bottom: 20px; right: 50%; transform: translateX(50%); z-index: 1000; display: flex; flex-direction: column; gap: 8px; width: min(92vw, 420px); }
+.toast {
+  padding: 14px 18px; border-radius: var(--radius); font-weight: 600; font-size: 0.94rem;
+  box-shadow: var(--shadow-lg); display: flex; align-items: center; gap: 10px;
+  animation: toast-in 0.3s cubic-bezier(0.21, 1.02, 0.73, 1);
+}
+.toast-success { background: var(--teal-800); color: #fff; }
+.toast-error { background: var(--danger); color: #fff; }
+.toast-info { background: var(--paper); color: var(--ink); border: 1px solid var(--line); }
+@keyframes toast-in { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+
+/* ═══════════ Modal ═══════════ */
+.modal-overlay {
+  position: fixed; inset: 0; background: rgba(6, 49, 43, 0.5); z-index: 900;
+  display: flex; align-items: flex-end; justify-content: center;
+  animation: fade-in 0.2s ease; backdrop-filter: blur(2px);
+}
+.modal {
+  background: var(--cream); width: 100%; max-width: 560px;
+  border-radius: 20px 20px 0 0; max-height: 92vh; overflow-y: auto;
+  animation: modal-up 0.3s cubic-bezier(0.21, 1.02, 0.73, 1);
+}
+@media (min-width: 640px) {
+  .modal-overlay { align-items: center; padding: 20px; }
+  .modal { border-radius: 20px; }
+}
+.modal-head { display: flex; align-items: center; justify-content: space-between; padding: 18px 20px 0; }
+.modal-head h3 { font-size: 1.15rem; color: var(--teal-800); }
+.modal-body { padding: 16px 20px 24px; }
+.modal-close { background: var(--paper); border: 1px solid var(--line); width: 36px; height: 36px; border-radius: 50%; font-size: 1.1rem; color: var(--ink-soft); display:flex;align-items:center;justify-content:center; }
+@keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes modal-up { from { transform: translateY(40px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+
+/* ═══════════ Skeleton & spinners ═══════════ */
+.skeleton { background: linear-gradient(90deg, #EDEAE2 25%, #F5F2EA 50%, #EDEAE2 75%); background-size: 200% 100%; animation: shimmer 1.4s infinite; border-radius: var(--radius-sm); }
+@keyframes shimmer { to { background-position: -200% 0; } }
+.spinner { width: 20px; height: 20px; border: 2.5px solid rgba(255,255,255,0.35); border-top-color: #fff; border-radius: 50%; animation: spin 0.7s linear infinite; }
+.spinner-dark { border-color: var(--teal-100); border-top-color: var(--teal-600); }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ═══════════ Empty states ═══════════ */
+.empty { text-align: center; padding: 48px 20px; color: var(--ink-mute); }
+.empty .empty-icon { font-size: 2.6rem; margin-bottom: 12px; opacity: 0.75; }
+.empty h4 { color: var(--ink-soft); font-size: 1.08rem; margin-bottom: 6px; }
+.empty p { font-size: 0.92rem; max-width: 340px; margin: 0 auto 16px; }
+
+/* ═══════════ The confirmation stamp moment ═══════════ */
+@keyframes stamp {
+  0% { transform: scale(2.2) rotate(-8deg); opacity: 0; }
+  55% { transform: scale(0.92) rotate(1deg); opacity: 1; }
+  75% { transform: scale(1.06); }
+  100% { transform: scale(1); }
+}
+.stamp-anim { animation: stamp 0.45s cubic-bezier(0.2, 0.9, 0.3, 1.3); }
+
+/* path dot progress */
+.path-track { display: flex; align-items: center; gap: 0; }
+.path-node { width: 12px; height: 12px; border-radius: 50%; background: var(--line); flex-shrink: 0; transition: background 0.3s, transform 0.3s; }
+.path-node.done { background: var(--teal-600); }
+.path-node.active { background: var(--teal-600); transform: scale(1.45); box-shadow: 0 0 0 4px var(--teal-100); }
+.path-seg { height: 2.5px; background: var(--line); flex: 1; min-width: 14px; transition: background 0.3s; }
+.path-seg.done { background: var(--teal-600); }
+
+/* ═══════════ Utilities ═══════════ */
+.row { display: flex; align-items: center; gap: 10px; }
+.row-between { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.wrap { flex-wrap: wrap; }
+.grow { flex: 1; }
+.mut { color: var(--ink-mute); }
+.soft { color: var(--ink-soft); }
+.small { font-size: 0.85rem; }
+.bold { font-weight: 700; }
+.mb-0 { margin-bottom: 0; } .mb-1 { margin-bottom: 8px; } .mb-2 { margin-bottom: 16px; } .mb-3 { margin-bottom: 24px; }
+.mt-1 { margin-top: 8px; } .mt-2 { margin-top: 16px; } .mt-3 { margin-top: 24px; }
+.hide { display: none !important; }
+.tabular { font-variant-numeric: tabular-nums; }
+.ltr { direction: ltr; unicode-bidi: embed; }

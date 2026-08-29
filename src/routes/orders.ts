@@ -14,7 +14,10 @@ async function computeFlags(db: D1Database, storeId: number, order: any): Promis
   const flags: string[] = []
   if (!order.address || String(order.address).trim().length < 8) flags.push('missing_address')
   if (order.call_attempts >= 3 && !['delivered', 'cancelled', 'returned', 'shipped'].includes(order.status)) flags.push('many_attempts')
-  if (order.followup_at && new Date(order.followup_at + 'Z') <= new Date() && !['delivered', 'cancelled', 'returned'].includes(order.status)) flags.push('followup_due')
+  if (order.followup_at) {
+    const due = new Date(String(order.followup_at).replace(' ', 'T') + (String(order.followup_at).includes('Z') ? '' : 'Z'))
+    if (!isNaN(due.getTime()) && due <= new Date() && !['delivered', 'cancelled', 'returned'].includes(order.status)) flags.push('followup_due')
+  }
   if (order.customer_phone) {
     const dup = await db.prepare(
       `SELECT COUNT(*) as n FROM orders WHERE store_id = ? AND customer_phone = ? AND id != ? AND status NOT IN ('delivered','cancelled','returned')`

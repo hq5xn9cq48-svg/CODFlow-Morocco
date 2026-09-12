@@ -11,7 +11,7 @@ export function head(title: string, description: string, opts: { noindex?: boole
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ar_MA">
   <meta property="og:site_name" content="تأكد — T2AKED">
-  <meta name="theme-color" content="#0D7A6C">
+  <meta name="theme-color" content="#0F8B8D">
   <link rel="icon" type="image/svg+xml" href="/static/favicon.svg">
   <link rel="manifest" href="/manifest.json">
   <link rel="apple-touch-icon" href="/static/icon-192.svg">

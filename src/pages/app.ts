@@ -9,6 +9,18 @@ ${head('لوحة التحكم — تأكد', 'لوحة تحكم تأكد لإد�
   /* ── App layout: bottom tab bar (mobile) / side rail (desktop) ── */
   body { background: var(--cream); }
   #app-root { min-height: 100vh; display: flex; flex-direction: column; }
+  .app-main-col { background: radial-gradient(circle at 100% 0%, rgba(37,167,162,0.08), transparent 34rem); }
+  .app-top { box-shadow: 0 1px 0 rgba(7,29,43,0.03); }
+  .page-head h1 { letter-spacing: -0.025em; }
+  .kpi { box-shadow: 0 8px 24px rgba(7,29,43,0.045); transition: transform 0.18s ease, box-shadow 0.18s ease; }
+  .kpi:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(7,29,43,0.08); }
+  .order-card, .chart-card, .list-row { box-shadow: 0 4px 18px rgba(7,29,43,0.035); }
+  .tabbar { box-shadow: 0 -8px 24px rgba(7,29,43,0.04); }
+  @media (max-width: 520px) {
+    #main-view { padding-inline: 14px; }
+    .page-head { align-items: flex-start; }
+    .page-head .btn { width: 100%; }
+  }
 
   .app-top {
     position: sticky; top: 0; z-index: 90;

@@ -5,24 +5,24 @@
 
 :root {
   /* Brand */
-  --teal-900: #06312B;
-  --teal-800: #083D36;
-  --teal-700: #0A5148;
-  --teal-600: #0D7A6C;
-  --teal-500: #129182;
-  --teal-100: #DCF0EC;
-  --teal-50:  #EEF7F5;
+  --teal-900: #071D2B;
+  --teal-800: #0A3042;
+  --teal-700: #0D5360;
+  --teal-600: #0F8B8D;
+  --teal-500: #25A7A2;
+  --teal-100: #D9F1EF;
+  --teal-50:  #EFF9F8;
 
-  --amber-600: #C77E00;
-  --amber-500: #E8A317;
-  --amber-100: #FCF0D8;
+  --amber-600: #B97812;
+  --amber-500: #E1A52B;
+  --amber-100: #FFF1D1;
 
-  --cream: #FAF8F4;
+  --cream: #F5F8FA;
   --paper: #FFFFFF;
-  --ink: #1A2E2B;
-  --ink-soft: #4A5F5B;
-  --ink-mute: #7A8E8A;
-  --line: #E5E1D8;
+  --ink: #132B38;
+  --ink-soft: #526873;
+  --ink-mute: #82939C;
+  --line: #DCE7EB;
 
   /* Status colors — the product's language */
   --st-new: #2563EB;        --st-new-bg: #EBF1FE;

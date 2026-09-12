@@ -9,8 +9,27 @@ ${head('تأكد — نظّم طلبات الدفع عند الاستلام دي
   /* ── Landing-specific styles ── */
   .land-nav {
     position: sticky; top: 0; z-index: 100;
-    background: rgba(250, 248, 244, 0.92); backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--line);
+    background: rgba(245, 248, 250, 0.9); backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(220, 231, 235, 0.8);
+  }
+  .hero { position: relative; isolation: isolate; }
+  .hero::before { content: ''; position: absolute; inset: 0 8% auto; height: 28rem; background: radial-gradient(circle at 50% 15%, rgba(37,167,162,0.13), transparent 62%); z-index: -1; pointer-events: none; }
+  .hero h1 { letter-spacing: -0.045em; }
+  .hero .sub { line-height: 1.85; }
+  .demo { box-shadow: 0 22px 60px rgba(7,29,43,0.14); }
+  .pain-card, .feat, .price-card, .faq-item { box-shadow: 0 8px 24px rgba(7,29,43,0.035); }
+  .pain-card:hover, .price-card:hover { transform: translateY(-3px); box-shadow: 0 14px 34px rgba(7,29,43,0.09); }
+  .final-cta { box-shadow: 0 22px 50px rgba(7,29,43,0.16); }
+  @media (max-width: 520px) {
+    .land-nav-inner { padding-inline: 14px; }
+    .land-nav .row { gap: 6px; }
+    .land-nav .btn { padding-inline: 11px; }
+    .hero { padding-top: 38px; }
+    .hero h1 { font-size: clamp(2rem, 11vw, 3rem); }
+    .hero-ctas { flex-direction: column; align-items: stretch; }
+    .hero-ctas .btn { width: 100%; }
+    .demo-wrap { padding-inline: 10px; }
+    .demo-body { padding: 18px 14px 20px; }
   }
   .land-nav-inner { max-width: 1100px; margin: 0 auto; padding: 12px 20px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
   .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 700; font-size: 1.25rem; color: var(--teal-800); }
@@ -209,7 +228,7 @@ ${head('تأكد — نظّم طلبات الدفع عند الاستلام دي
     <div class="feat rv"><div class="fi">📥</div><h3>كل الطلبات فبلاصة وحدة</h3><p>زيد الطلب فثواني — من إنستغرام، واتساب، فيسبوك أو مكالمة. كل طلب عندو رقم وحالة وتاريخ.</p></div>
     <div class="feat rv"><div class="fi">🛤️</div><h3>مسار واضح لكل طلب</h3><p>جديد ← يحتاج تأكيد ← مؤكد ← قيد التجهيز ← تم الشحن ← تم التسليم. عمرك تسول «فين وصل هاد الطلب؟»</p></div>
     <div class="feat rv"><div class="fi">💬</div><h3>رسائل جاهزة بالدارجة</h3><p>رسالة تأكيد، تذكير، شحن، اعتذار… بضغطة وحدة كتعمر بسميّة العميل والثمن، وكتنسخها للواتساب.</p></div>
-    <div class="feat rv"><div class="fi">🔔</div><h3>لائحة «اليوم» — شنو خاصك دير دابا</h3><p>كل صباح كتلقى قدامك: شكون خاصو تأكيد، شكون خاصو متابعة، وشنو واجد يتصيفط.</p></div>
+    <div class="feat rv"><div class="fi">🔔</div><h3>لائحة «اليوم» — شنو خاصك دير دابا</h3><p>كل صباح كتلقى قدامك: شكون خاصو تأكيد، شكون خاصو م��ابعة، وشنو واجد يتصيفط.</p></div>
     <div class="feat rv"><div class="fi">⚠️</div><h3>مؤشرات مراجعة قبل الشحن</h3><p>رقم مكرر، عنوان ناقص، عميل عندو إلغاءات سابقة — كتشوفها قبل ما تخسر التوصيل.</p></div>
     <div class="feat rv"><div class="fi">📊</div><h3>أرقام متجرك بلا تعقيد</h3><p>نسبة التأكيد، أكثر المدن والمنتجات طلباً، مقارنة الأسابيع — حسب بيانات متجرك.</p></div>
   </div>
@@ -311,7 +330,7 @@ ${head('تأكد — نظّم طلبات الدفع عند الاستلام دي
       <a href="/privacy">سياسة الخصوصية</a>
       <a href="mailto:salam@t2aked.ma">تواصل معنا</a>
     </div>
-    <span class="small mut">© 2026 تأكد. صنع بحب فالمغرب 🇲🇦</span>
+    <span class="small mut">© 2026 تأكد. صن�� بحب فالمغرب 🇲🇦</span>
   </div>
 </footer>
 

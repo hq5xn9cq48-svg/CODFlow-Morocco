@@ -24,14 +24,14 @@ ${head('لوحة التحكم — تأكد', 'لوحة تحكم تأكد لإد�
 
   .app-top {
     position: sticky; top: 0; z-index: 90;
-    background: rgba(250,248,244,0.94); backdrop-filter: blur(8px);
+    background: rgba(244,247,249,0.92); backdrop-filter: blur(14px);
     border-bottom: 1px solid var(--line);
-    padding: 10px 16px; display: flex; align-items: center; justify-content: space-between; gap: 10px;
+    padding: 14px 28px; display: flex; align-items: center; justify-content: space-between; gap: 10px;
   }
   .app-top .brand-mini { display: flex; align-items: center; gap: 8px; font-weight: 700; color: var(--teal-800); text-decoration: none; font-size: 1.05rem; }
-  .app-top .store-chip { font-size: 0.82rem; color: var(--ink-mute); background: var(--paper); border: 1px solid var(--line); padding: 4px 12px; border-radius: 999px; max-width: 46vw; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .app-top .store-chip { font-size: 0.82rem; color: var(--teal-800); background: var(--teal-50); border: 1px solid var(--teal-100); padding: 6px 13px; border-radius: 999px; max-width: 46vw; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 600; }
 
-  #main-view { flex: 1; padding: 16px 16px 90px; max-width: 1060px; width: 100%; margin: 0 auto; }
+  #main-view { flex: 1; padding: 30px 28px 90px; max-width: 1180px; width: 100%; margin: 0 auto; }
 
   .tabbar {
     position: fixed; bottom: 0; right: 0; left: 0; z-index: 90;
@@ -53,32 +53,34 @@ ${head('لوحة التحكم — تأكد', 'لوحة تحكم تأكد لإد�
       position: sticky; top: 0; bottom: auto; height: 100vh; width: 210px;
       flex-direction: column; justify-content: flex-start; gap: 4px;
       border-top: none; border-inline-start: none; border-inline-end: 1px solid var(--line);
-      padding: 18px 12px;
+      padding: 24px 14px;
+      background: rgba(255,255,255,.72);
     }
     .tab { flex-direction: row; gap: 10px; font-size: 0.95rem; padding: 11px 14px; width: 100%; justify-content: flex-start; }
+    .tab.active { box-shadow: inset -3px 0 var(--teal-600); }
     .tab .ti { font-size: 1.15rem; }
     .app-main-col { flex: 1; display: flex; flex-direction: column; min-width: 0; }
     #main-view { padding-bottom: 40px; }
-    #rail-brand { display: flex !important; align-items: center; gap: 9px; font-weight: 700; color: var(--teal-800); font-size: 1.15rem; padding: 4px 10px 18px; text-decoration: none; }
+    #rail-brand { display: flex !important; align-items: center; gap: 9px; font-weight: 700; color: var(--teal-800); font-size: 1.15rem; padding: 4px 10px 28px; text-decoration: none; }
     .app-top .brand-mini { display: none; }
   }
   #rail-brand { display: none; }
 
   /* page header inside view */
   .page-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 18px; flex-wrap: wrap; }
-  .page-head h1 { font-size: 1.35rem; color: var(--teal-900); }
+  .page-head h1 { font-size: clamp(1.35rem, 2vw, 1.75rem); color: var(--teal-900); }
 
   /* KPI tiles */
   .kpis { display: grid; gap: 10px; grid-template-columns: repeat(2, 1fr); margin-bottom: 18px; }
   @media (min-width: 700px) { .kpis { grid-template-columns: repeat(4, 1fr); } }
-  .kpi { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 16px; }
-  .kpi .kv { font-size: 1.65rem; font-weight: 700; color: var(--teal-900); line-height: 1.2; }
+  .kpi { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px 18px; }
+  .kpi .kv { font-size: 1.9rem; font-weight: 700; color: var(--teal-900); line-height: 1.2; letter-spacing: -.04em; }
   .kpi .kl { font-size: 0.82rem; color: var(--ink-mute); font-weight: 500; }
   .kpi.hot { border-color: var(--amber-500); background: linear-gradient(135deg, var(--paper), var(--amber-100)); }
 
   /* order cards (mobile-first list) */
-  .order-card { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 16px; margin-bottom: 10px; cursor: pointer; transition: box-shadow 0.15s, transform 0.15s; }
-  .order-card:hover { box-shadow: var(--shadow); }
+  .order-card { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); padding: 17px 18px; margin-bottom: 10px; cursor: pointer; transition: box-shadow 0.15s, transform 0.15s, border-color .15s; }
+  .order-card:hover { box-shadow: var(--shadow); border-color: #b8d9d6; }
   .order-card:active { transform: scale(0.995); }
   .order-card .oc-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; margin-bottom: 6px; }
   .order-card .oc-name { font-weight: 700; color: var(--teal-900); }

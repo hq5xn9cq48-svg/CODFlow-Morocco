@@ -118,3 +118,5 @@ ${head('تأكد — منصة تشغيل طلبات الدفع عند الاست
 (function(){var els=document.querySelectorAll('.rv');if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');o.unobserve(e.target)}})},{threshold:.12});els.forEach(function(e){o.observe(e)})})();
 </script></body></html>`
 }
+
+export default landingPage
